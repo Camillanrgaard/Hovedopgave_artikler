@@ -1,0 +1,178 @@
+/* ---------------------------- WORDPRESS ARTIKLER ---------------------------- */
+/* ---------- article grid "alle artikler" ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+  @media (min-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 992px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      overflow: hidden;
+    }
+  }
+.grid-container > article {
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  height: auto;
+}
+.grid-container > article:hover{
+  filter: opacity(0.5);
+}
+.grid-container > article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 0;
+}
+.grid-container .empty {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+}
+.underoverskrift{ /*guldskrift*/
+  text-align: left;
+  font-size: 14px;
+  color: #d7b46e;
+  text-transform: uppercase;
+  margin: 5px 0 0 0;
+}
+.title-h2{ /*overskrift*/
+  text-align: left;
+  font-weight: 400;
+  margin: 0;
+  font-size: calc(var(--font-size-base) * 1px);
+}
+/* ---------- grid container styling ---------- */
+.page {
+  display: none;
+  background: transparent;
+  animation: fadeIn 0.4s;
+  margin-top: -55px;
+}
+.article-detail-view{
+  width: 100%;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.detail-grid article {
+  text-align: left;
+}
+.related-articles-div{
+  height: 465px;
+}
+.detail-grid h1 {
+  margin: 20px 0;
+  padding-top: 20px;
+}
+.detail-grid iframe {
+  width: 80%;
+  height: 500px;
+}
+.wp-block-image{
+  margin: auto;
+  text-align: center;
+  width: 60%;
+}
+  @media only screen and (max-width: 749px){
+    .wp-block-image{
+  width: 100%;
+}
+    .detail-grid iframe{
+      width: 100%;
+      height: 200px;
+    }
+  }
+article iframe{
+  display: block;
+  margin: 30px auto;
+}
+article video{
+  width: 80%;
+  display: block;
+  margin: 30px auto;
+}
+
+  @media only screen and (max-width: 749px){
+    article video{
+      width: 100%;
+    }
+  }
+article img{
+  width: 70%;
+  display: block;
+  margin: 30px auto;
+  height: auto;
+}
+  @media only screen and (max-width: 749px){
+    article img{
+      width: 100%;
+    }
+  }
+.article-cover-img{
+  display: block;
+  width: 80%;
+  max-height: 280px;
+  margin: 30px auto;
+  object-fit: cover;
+}
+  @media only screen and (max-width: 749px){
+    .article-cover-img{
+      width: 100%;
+    }
+  }
+article ol {
+  width: 70%;
+  display: block;
+  margin: -30px auto 0 auto !important;
+}
+  @media only screen and (max-width: 749px){
+    article ol{
+      width: 90%;
+    }
+  }
+article ul {
+  width: 70%;
+  display: block;
+  margin: -30px auto 0 auto !important;
+}
+  @media only screen and (max-width: 749px){
+    article ul{
+      width: 90%;
+    }
+  }
+.article-heading{ /*overskrift*/
+  font-size: calc(((var(--font-h1-desktop))/ (var(--font-size-base))) * 1em);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-align: center;
+  margin-bottom: 0 !important;
+}
+  @media only screen and (max-width: 749px){
+    .article-heading{
+      margin-top: 55px !important;
+    }
+  }
+.skraaskrift{
+  font-style: italic;
+  text-align: center;
+  margin: 0 auto;
+}
+article p{
+  width: 70%;
+  margin: 30px auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+  @media only screen and (max-width: 749px){
+    article p{
+    width: 90%;
+    }
+  }
